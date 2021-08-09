@@ -29,3 +29,12 @@
 
 - After selecting any of the name from the list above, a screen containing the organisation details will appear
 <img src="images/details.png" width=300, height=400>
+
+- User can also search specific name, category etc using search bar
+<img src="images/searchbutton.png" width=300, height=400>
+
+##### After clicking on "search button" user will be directed to a seaarch screen where they can search
+##### as per the requirement
+
+<img src="images/search1.png" width=300, height=400>
+<img src="images/search2.png" width=300, height=400>
