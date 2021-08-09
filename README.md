@@ -6,4 +6,6 @@
 
 ## How To Use?
 
-- First user asked whether he/she a patient or an organization
+- First user is asked whether he/she is a patient or an organization
+
+<imgs src="images/firstscreen.jpg" width= 200, height= 300>
