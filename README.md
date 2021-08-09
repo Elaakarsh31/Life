@@ -8,4 +8,4 @@
 
 - First user is asked whether he/she is a patient or an organization
 
-<imgs src="images/firstscreen.jpg" width= 200, height= 300>
+<imgs src="images/logo.png" width= 200, height= 300>
