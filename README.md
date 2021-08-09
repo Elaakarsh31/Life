@@ -6,4 +6,4 @@
 
 ## How To Use?
 
-<img src="images/firstscreen.png" width=200, height=200>
+<img src="images/firstscreen.png" width=200, height=300>
