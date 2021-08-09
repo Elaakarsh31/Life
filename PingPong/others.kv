@@ -1,0 +1,70 @@
+<Others>
+    FloatLayout:
+        canvas.before:
+            Color:
+                rgba: (0,0,0,1)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        MDTextButton:
+            text: "<Back"
+            pos_hint: {'top': 0.99, 'left': 0.99}
+            theme_text_color: "Custom"
+            text_color: 1,1,1,1
+            on_release:
+                app.change_screen('first', 'backward')
+                root.manager.transition.direction = 'right'
+        MDCard:
+            md_bg_color: utils.get_color_from_hex('#f2aa4cff')
+            size_hint: None,None
+            size: 320,360
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            elevation: 35
+            orientation: 'vertical'
+            padding: 25
+            spacing: 10
+
+        MDTextFieldRound:
+            id: name
+            hint_text: "Name of Organization"
+            normal_color: utils.get_color_from_hex('#f1f9fa')
+            color_active: utils.get_color_from_hex('#f1f9fa')
+            pos_hint: {'center_x': 0.5, 'center_y': 0.7}
+            size_hint: 0.5, None
+        MDTextFieldRound:
+            id: cat
+            hint_text: "Category: Ex: Hospital, NGO, BloodBank"
+            normal_color: utils.get_color_from_hex('#f1f9fa')
+            color_active: utils.get_color_from_hex('#f1f9fa')
+            theme_text_color: "Custom"
+            text_color: 1,1,1,1
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+            size_hint: 0.5, None
+        MDTextFieldRound:
+            id: mail
+            hint_text: "email"
+            normal_color: utils.get_color_from_hex('#f1f9fa')
+            color_active: utils.get_color_from_hex('#f1f9fa')
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            size_hint: 0.5, None
+        MDTextFieldRound:
+            id: ph
+            hint_text: "Contact info"
+            normal_color: utils.get_color_from_hex('#f1f9fa')
+            color_active: utils.get_color_from_hex('#f1f9fa')
+            pos_hint: {'center_x': 0.5, 'center_y': 0.4}
+            size_hint: 0.5, None
+        MDTextFieldRound:
+            id: ad
+            hint_text: "Address:"
+            normal_color: utils.get_color_from_hex('#f1f9fa')
+            color_active: utils.get_color_from_hex('#f1f9fa')
+            pos_hint: {'center_x': 0.5, 'center_y': 0.3}
+            size_hint: 0.5, None
+        MDFillRoundFlatButton:
+            text: "Submit"
+            md_bg_color: 1,0,0,1
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_release:
+                app.my_firebase.submit(name.text, cat.text, mail.text, ph.text, ad.text)
+                app.change_screen('first', 'forward')

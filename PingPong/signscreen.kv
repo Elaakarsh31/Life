@@ -1,0 +1,97 @@
+<SignScreen>
+    FloatLayout:
+        canvas.before:
+            Color:
+                rgba: (16/255, 24/255, 32/255, 1)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        MDTextButton:
+            text: "<Back"
+            pos_hint: {'top': 0.988, 'left': 0.99}
+            theme_text_color: "Custom"
+            text_color: 1,1,1,1
+            on_release:
+                app.change_screen('login', 'backward')
+                root.manager.transition.direction = 'right'
+
+        MDCard:
+            md_bg_color: utils.get_color_from_hex('#f2aa4cff')
+            size_hint: None,None
+            size: 320,500
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            elevation: 35
+            orientation: 'vertical'
+            padding: 25
+            spacing: 7
+        MDTextFieldRound:
+            id: first_name
+            hint_text: "First Name"
+            normal_color: utils.get_color_from_hex('#f1f9fa')
+            color_active: utils.get_color_from_hex('#f1f9fa')
+            pos_hint: {'center_x': 0.5, 'center_y': 0.8}
+            size_hint: 0.5, None
+
+        MDTextFieldRound:
+            id: last_name
+            hint_text: "Last Name"
+            normal_color: utils.get_color_from_hex('#f1f9fa')
+            color_active: utils.get_color_from_hex('#f1f9fa')
+            pos_hint: {'center_x': 0.5, 'center_y': 0.7}
+            size_hint: 0.5, None
+
+        MDTextFieldRound:
+            id: age
+            hint_text: "Age"
+            normal_color: utils.get_color_from_hex('#f1f9fa')
+            color_active: utils.get_color_from_hex('#f1f9fa')
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+            size_hint: 0.5, None
+
+        MDTextFieldRound:
+            id: sex
+            hint_text: "Sex: Male, Female or other"
+            normal_color: utils.get_color_from_hex('#f1f9fa')
+            color_active: utils.get_color_from_hex('#f1f9fa')
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            size_hint: 0.5, None
+
+        MDTextFieldRound:
+            hint_text: "email"
+            normal_color: utils.get_color_from_hex('#f1f9fa')
+            color_active: utils.get_color_from_hex('#f1f9fa')
+            id: sign_email
+            pos_hint: {'center_x': 0.5, 'center_y': 0.4}
+            size_hint: 0.5, None
+
+        MDTextFieldRound:
+            hint_text: "password"
+            password: True
+            normal_color: utils.get_color_from_hex('#f1f9fa')
+            color_active: utils.get_color_from_hex('#f1f9fa')
+            pos_hint: {'center_x': 0.5, 'center_y': 0.3}
+            size_hint: 0.5, None
+
+        MDTextFieldRound:
+            hint_text: "confirm password"
+            password: True
+            normal_color: utils.get_color_from_hex('#f1f9fa')
+            color_active: utils.get_color_from_hex('#f1f9fa')
+            id: sign_pass
+            pos_hint: {'center_x': 0.5, 'center_y': 0.2}
+            size_hint: 0.5, None
+
+        MDFillRoundFlatButton:
+            text: "Sign Up"
+            size_hint: 0.2, 0.07
+            md_bg_color: 0,0,0,1
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_release:
+                app.my_firebase.SignUp(sign_email.text, sign_pass.text, first_name.text, last_name.text, age.text, sex.text)
+                print(sign_email.text, sign_pass.text)
+
+        MDLabel:
+            text: ""
+            id: error
+            size_hint: 0.2, 0.07
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}

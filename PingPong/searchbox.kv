@@ -1,0 +1,33 @@
+#:import Window kivy.core.window
+
+<SearchBox>
+    MDTextField:
+        id: add
+        hint_text: "search"
+        #icon_right: 'magnify'
+        pos_hint: {'top': 1, 'right': 0.9}
+        size_hint: 0.8,.1
+        on_text: app.search_menu.clear()
+
+    MDIconButton:
+        icon: 'magnify'
+        pos_hint: {'top': 1, 'right': 0.9}
+        on_press:
+            app.search_menu.take(add.text)
+
+    ScrollView:
+        size_hint_y: 0.8
+        pos_hint: {'top': 0.9, 'right': 1}
+        do_scroll_y: True
+        GridLayout:
+            id: grid
+            size: (root.width, root.height)
+            #size_hint_x: None
+            size_hint_y: None
+            cols : 1
+            height: self.minimum_height
+
+    MDLabel:
+        id: not
+        text: app.Not_text
+        halign: 'center'

@@ -1,0 +1,17 @@
+<BloodBank@Screen>
+    MDTextButton:
+        text: "<Back"
+        pos_hint: {'top': 0.99, 'left': 0.99}
+        theme_text_color: "Custom"
+        text_color: 0,0,1,1
+        on_release: app.clear_card('blood','blood_layout')
+    ScrollView:
+        size_hint_y: 0.8
+        pos_hint: {'top': 0.9, 'right': 1}
+        do_scroll_y: True
+        GridLayout:
+            id: blood_layout
+            size: (root.width, root.height)
+            size_hint_y: None
+            cols : 1
+            height: self.minimum_height

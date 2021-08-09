@@ -1,0 +1,92 @@
+#:import utils kivy.utils
+#:include C:\Users\aakar\PycharmProjects\pythonProject\PingPong\card_item.kv
+
+<HomeScreen>
+    FloatLayout:
+        canvas.before:
+            Color:
+                rgba: (16/255, 24/255, 32/255, 1)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        MDBoxLayout:
+            padding: 20,20,20,20
+            ScrollView:
+                MDList:
+                    spacing: 25
+                    padding: 20,0,20,0
+                    MDCard:
+                        on_press: app.search_menu.hospital()
+                        md_bg_color: utils.get_color_from_hex('#f2fcfe')
+                        size_hint_y: None
+                        height: "200dp"
+                        GridLayout:
+                            rows: 2
+                            cols: 1
+                            MDLabel:
+                                text: "Hospital"
+                                halign: 'center'
+                                font_size: 40
+                                font_name: "C:\\Users\\aakar\\Desktop\\VSCODE\\PaletteMosaic-Regular"
+                            Image:
+                                source: "C:\\Users\\aakar\\Desktop\\VSCODE\\hospital.png"
+                                size: 100,100
+
+                    MDCard:
+                        on_press: app.search_menu.blood()
+                        md_bg_color: utils.get_color_from_hex('#f4a896')
+                        size_hint_y: None
+                        height: "200dp"
+                        GridLayout:
+                            rows: 2
+                            cols: 1
+                            MDLabel:
+                                text: "Blood Bank"
+                                halign: 'center'
+                                font_size: 40
+                                font_name: "C:\\Users\\aakar\\Desktop\\VSCODE\\PaletteMosaic-Regular"
+                            Image:
+                                source: "C:\\Users\\aakar\\Desktop\\VSCODE\\blood.png"
+                                size: 100,100
+
+                    MDCard:
+                        on_press: app.search_menu.NGO()
+                        md_bg_color: utils.get_color_from_hex('#adefd1ff')
+                        size_hint_y: None
+                        height: "200dp"
+                        GridLayout:
+                            rows: 2
+                            cols: 1
+                            MDLabel:
+                                text: "NGO"
+                                halign: 'center'
+                                font_size: 40
+                                font_name: "C:\\Users\\aakar\\Desktop\\VSCODE\\PaletteMosaic-Regular"
+                            Image:
+                                source: "C:\\Users\\aakar\\Desktop\\VSCODE\\ngo.png"
+                                size: 100,100
+                    MDCard:
+                        on_press: app.search_menu.vaccine()
+                        md_bg_color: utils.get_color_from_hex('#5cc8d7ff')
+                        size_hint_y: None
+                        height: "200dp"
+                        GridLayout:
+                            rows: 2
+                            cols: 1
+                            MDLabel:
+                                text: "Vaccine Center"
+                                halign: 'center'
+                                font_size: 40
+                                font_name: "C:\\Users\\aakar\\Desktop\\VSCODE\\PaletteMosaic-Regular"
+                            Image:
+                                source: "C:\\Users\\aakar\\Desktop\\VSCODE\\inject.png"
+                                size: 100,100
+
+        MDBottomAppBar:
+            md_bg_color: utils.get_color_from_hex('#f2aa4cff')
+            MDToolbar:
+                icon: "magnify"
+                icon_color: utils.get_color_from_hex('#f2aa4cff')
+                md_bg_color:
+                on_action_button: app.change_screen('search', 'forward')
+                type: "bottom"

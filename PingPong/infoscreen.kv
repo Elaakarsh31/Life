@@ -1,0 +1,32 @@
+#:import MapView kivy_garden.mapview.MapView
+<InfoScreen>
+    FloatLayout:
+    MDTextButton:
+        text: "<Back"
+        pos_hint: {'top': 0.99, 'left': 0.99}
+        theme_text_color: "Custom"
+        text_color: 0,0,1,1
+        on_release:
+            app.change_screen('home', 'backward')
+            app.clear_info()
+    BoxLayout:
+        padding: 0,10,0,0
+        orientation: "vertical"
+        id: box
+
+        GridLayout:
+            id: details
+            rows: 5
+            padding: (20,20,20,20)
+
+
+        GridLayout:
+            padding: (10,0,10,10)
+            rows: 2
+            id: map
+            MDLabel:
+                text: 'MAP'
+                halign: 'center'
+                size_hint_y: 0.2
+
+

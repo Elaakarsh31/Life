@@ -1,0 +1,91 @@
+#:import utils kivy.utils
+<LoginScreen>
+    FloatLayout:
+        canvas.before:
+            Color:
+                rgba: (16/255, 16/255, 16/255, 1)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        MDTextButton:
+            text: "<Back"
+            pos_hint: {'top': 0.99, 'left': 0.99}
+            theme_text_color: "Custom"
+            text_color: 1,1,1,1
+            on_release: app.change_screen('first', 'backward')
+
+        MDCard:
+            md_bg_color: utils.get_color_from_hex('#1a191a')
+            size_hint: None,None
+            size: 320,400
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            elevation: 35
+            orientation: 'vertical'
+            padding: 25
+            spacing: 7
+
+            MDLabel:
+                text: "LOGIN"
+                theme_text_color: "Custom"
+                text_color: 1,1,1,1
+                font_name: "C:\\Users\\aakar\\Desktop\\VSCODE\\BarlowCondensed-BoldItalic"
+                font_size: 35
+                halign: 'center'
+                size_hint_y: None
+                height: self.texture_size[1]
+                padding_y: 15
+
+            MDTextFieldRound:
+                hint_text: "email"
+                hint_text_color: 0,0,0,.2
+                text_color: 0,0,0,1
+                id: email
+                font_size: 18
+                normal_color: utils.get_color_from_hex('#f1f9fa')
+                color_active: utils.get_color_from_hex('#f1f9fa')
+                icon_right: 'account'
+                icon_color:
+                size_hint_x: None
+                width: 220
+                pos_hint: {'center_x': 0.5}
+
+            MDTextFieldRound:
+                hint_text: "password"
+                password: True
+                id: log_pass
+                hint_text_color: 0,0,0,.2
+                text_color: 0,0,0,1
+                icon_right: 'eye'
+                normal_color: utils.get_color_from_hex('#f1f9fa')
+                color_active: utils.get_color_from_hex('#f1f9fa')
+                pos_hint: {'center_x': 0.5}
+                size_hint_x: None
+                width: 220
+
+            MDFillRoundFlatButton:
+                text: "LOGIN"
+                md_bg_color: (1,0,0,1) if self.state == 'normal' else (.5,0,.2,1)
+                #size_hint: 0.2, 0.07
+                pos_hint: {'center_x': 0.5}
+                on_release: app.my_firebase.Login(email.text, log_pass.text)
+
+            MDRoundFlatButton:
+                text: "Sign Up"
+                #size_hint: 0.2, 0.07
+                pos_hint: {'center_x': 0.5}
+                on_press: root.manager.current = 'sign'
+
+            MDLabel:
+                text: ""
+                id: error
+                theme_text_color: "Custom"
+                text_color: 1,0,0,1
+                size_hint_y: None
+                font_size: 25
+                halign: 'center'
+                height: self.texture_size[1]
+            Widget:
+                size_hint_y: None
+                height: 30
+
+
