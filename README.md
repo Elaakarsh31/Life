@@ -6,6 +6,4 @@
 
 ## How To Use?
 
-
-</br>
 <imgs src="images/logo.png" width= 200, height= 300>
