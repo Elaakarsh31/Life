@@ -11,3 +11,12 @@
 
 ##### if the user is a patient he/she is directed to the login screen, where an existing user can sign in or a new user can sign up
 <img src="images/loginscreen.png" width=300, height=400>
+
+- New users taken to SignUp screen are asked the basic requirements
+<img src="images/signupscreen.png" width=300, height=400>
+
+- If the user is an organisation, they select the others option
+##### here they fill up the requirements and then click "Submit"
+<img src="images/otherscreen.png" width=300, height=400>
+
+
