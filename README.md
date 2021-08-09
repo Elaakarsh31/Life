@@ -25,5 +25,4 @@
 ##### Now, the user can scroll through the option: "Hospital", "Blood Banks", "NGOs", "Vaccine Center"
 ##### when the user select on of them, it shows the list of all the places in the category the user selected
 
-
-
+<img src="images/list.png" width=300, height=400>
