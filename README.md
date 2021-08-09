@@ -7,5 +7,5 @@
 ## How To Use?
 
 - First user is asked whether he/she is a patient or an organization
-
-    <imgs src="images/logo.png" width= 200, height= 300>
+</br>
+<imgs src="images/logo.png" width= 200, height= 300>
