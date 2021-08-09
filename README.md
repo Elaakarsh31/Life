@@ -6,4 +6,5 @@
 
 ## How To Use?
 
-<img src="images/firstscreen.png" width=200, height=300>
+- First user is asked whether he/she is a patient or an organisation
+<img src="images/firstscreen.png" width=300, height=400>
