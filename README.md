@@ -2,6 +2,6 @@
 
 # Life
 
-### A place where you can find all the hodpitals, vaccine centers, blood banks, NGOs or any other organisation
+#### A place where you can find all the hodpitals, vaccine centers, blood banks, NGOs or any other organisation
 
 ## How To Use?
