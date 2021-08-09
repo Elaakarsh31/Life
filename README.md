@@ -26,3 +26,6 @@
 ##### when the user select on of them, it shows the list of all the places in the category the user selected
 
 <img src="images/list.png" width=300, height=400>
+
+- After selecting any of the name from the list above, a screen containing the organisation details will appear
+<img src="images/details.png" width=300, height=400>
