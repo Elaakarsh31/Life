@@ -5,3 +5,5 @@
 #### A place where you can find all the hodpitals, vaccine centers, blood banks, NGOs or any other organisation
 
 ## How To Use?
+
+- First user asked whether he/she a patient or an organization
