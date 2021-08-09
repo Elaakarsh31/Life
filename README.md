@@ -1,2 +1,2 @@
 # LIFE
-<img src="images/logo.png" width=100>
+<img src="images/logo.png" width=200, height=200>
