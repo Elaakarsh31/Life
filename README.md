@@ -6,6 +6,6 @@
 
 ## How To Use?
 
-- First user is asked whether he/she is a patient or an organization
+
 </br>
 <imgs src="images/logo.png" width= 200, height= 300>
