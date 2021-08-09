@@ -8,3 +8,6 @@
 
 - First user is asked whether he/she is a patient or an organisation
 <img src="images/firstscreen.png" width=300, height=400>
+
+##### if the user is a patient he/she is directed to the login screen, where an existing user can sign in or a new user can sign up
+<img src="images/loginscreen.png" width=300, height=400>
