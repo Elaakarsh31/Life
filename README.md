@@ -17,6 +17,6 @@
 
 - If the user is an organisation, they select the others option
 ##### here they fill up the requirements and then click "Submit"
-<img src="images/otherscreen.png" width=300, height=400>
+<img src="images/othersscreen.png" width=300, height=400>
 
 
